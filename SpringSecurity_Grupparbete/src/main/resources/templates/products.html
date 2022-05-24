@@ -1,0 +1,31 @@
+<!--DOCTYPE html>
+<html-- xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Produkter</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<h1 th:text="${rubrik}"/>
+<body>
+<table class="table table-dark">
+    <thead>
+    <tr>
+        <th scope="col">Märke</th>
+        <th scope="col">Färg</th>
+        <th scope="col">Storlek</th>
+        <th scope="col">Pris</th>
+        <th scope="col">Antal i lager</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="prod : ${allProducts}">
+        <td th:text="${prod.getMarke()}"></td>
+        <td th:text="${prod.getFarg()}"></td>
+        <td th:text="${prod.getStorlek()}"></td>
+        <td th:text="${prod.getPris()}"></td>
+        <td th:text="${prod.getAntalILager()}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html-->
